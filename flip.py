@@ -1,5 +1,3 @@
-
-
 from shroomdk import ShroomDK
 
 sdk = ShroomDK("7f75ae4f-fd68-4655-be41-d442d6d7c490")
