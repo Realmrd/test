@@ -1,7 +1,9 @@
+pip install shroomdk
+
 from shroomdk import ShroomDK
 
-sdk = ShroomDK("<7f75ae4f-fd68-4655-be41-d442d6d7c490>")
-
+sdk = ShroomDK("7f75ae4f-fd68-4655-be41-d442d6d7c490")
+my_address = lower("0x6EA012A3249ccc35D020Dd4124b739956966699e")
 sql = f"""
   with base as
 ((with cp_owner as
@@ -146,3 +148,10 @@ order by punkid+0
 """
 
 results = sdk.query(sql)
+
+query_result_set = sdk.query(sql)
+
+for record in query_result_set.records:
+    punkid = record['punkid']
+    owner = record['owner']
+    print(f"${punkid} minted for {owner}")
