@@ -152,4 +152,4 @@ query_result_set = sdk.query(sql)
 for record in query_result_set.records:
     punkid = record['punkid']
     owner = record['owner']
-    print(f"${punkid} minted for {owner}")
+    print(f"CP #{punkid} Owned by {owner}")
