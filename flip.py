@@ -1,4 +1,4 @@
-pip install shroomdk
+
 
 from shroomdk import ShroomDK
 
